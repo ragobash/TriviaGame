@@ -1,0 +1,11 @@
+body{
+	background-image: url(http://www.technocrazed.com/wp-content/uploads/2015/12/Brick-wallaper-For-Background-21.jpg);
+	text-align: center;
+}
+
+.last-seconds{
+  color: red;
+}
+.option{
+  margin: 15px;
+}
