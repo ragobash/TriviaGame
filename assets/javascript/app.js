@@ -5,7 +5,7 @@ $(document).ready(function(){
     $(document).on('click', '.option', trivia.guessChecker);
     
   })
-  
+  var k = 0;
   var trivia = {
     
     correct: 0,
@@ -51,10 +51,11 @@ $(document).ready(function(){
       trivia.incorrect = 0;
       trivia.unanswered = 0;
       clearInterval(trivia.timerId);
-      
+      $("#question").css("filter", "blur()");
+
       $('#game').show();
       
-      $('#results').html('');
+      $('#results').html("");
       
       $('#timer').text(trivia.timer);
       
@@ -131,6 +132,8 @@ $(document).ready(function(){
         clearInterval(trivia.timerId);
         resultId = setTimeout(trivia.guessResult, 2000);
         $('#results').html('<h3>Correct! Great job!</h3>');
+        k--;
+        $("#question").css("filter", "blur("+k+"px)");
       }
       
       else{
@@ -141,9 +144,12 @@ $(document).ready(function(){
         clearInterval(trivia.timerId);
         resultId = setTimeout(trivia.guessResult, 3000);
         $('#results').html('<h3>You are cut off! The correct answer was '+ currentAnswer +'.</h3>');
+        k++;
+        $("#question").css("filter", "blur("+k+"px)");
+
       } 
     },
-   
+    
     guessResult : function(){
    
       trivia.currentSet++;
