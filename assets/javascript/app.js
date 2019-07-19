@@ -146,7 +146,7 @@ $(document).ready(function(){
         $('#results').html('<h3>You are cut off! The correct answer was '+ currentAnswer +'.</h3>');
         k++;
         $("#question").css("filter", "blur("+k+"px)");
-
+        Photos. 
       } 
     },
     
