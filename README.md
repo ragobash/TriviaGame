@@ -1,5 +1,3 @@
-# TriviaGame
-
 # Cheers
 A generic bar trivia game
 
